@@ -18,7 +18,7 @@ public class BookTest {
     @PersistenceContext EntityManager entityManager;
 
     @Transactional
-    @Rollback(false)
+    @Rollback(true)
     @Test
     public void test() {
         Book book = new Book();
