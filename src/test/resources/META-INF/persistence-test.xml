@@ -34,14 +34,12 @@
 
     <persistence-unit name="tempWarPU" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <class>com.tao.Book</class>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
             <property name="hibernate.hbm2ddl.auto" value="create"/>
-            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/temp_war"/>
             <property name="hibernate.show_sql" value="true"/>
-            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
-            <property name="hibernate.connection.password" value="tempWar"/>
-            <property name="hibernate.connection.username" value="tempWar"/>
         </properties>
     </persistence-unit>
 </persistence>
